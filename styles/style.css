@@ -17,11 +17,11 @@ body {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.521), rgba(0, 0, 0, 0.150)), url(../images/banner.png);
   background-repeat: no-repeat;
   background-size: cover;
+  max-width: 1170px;
   margin: 50px auto;
   padding: 50px 150px;
   border-radius: 10px;
   text-align: center;
-  max-width: 1170px;
   height: 75vh; 
 }
 
@@ -47,9 +47,12 @@ body {
   gap: 24px;
   justify-content: center;
   align-items: center;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.30);
+  padding: 16px;
 }
 
-.input, .button {
+.input, .btn-primary {
   width: 174px;
   height: 100%;
   background-color: #fff;
@@ -60,9 +63,83 @@ body {
   border-radius: 8px;
 }
 
-.button {
+.btn-primary {
   background: #FF5400;
   color: #fff;
-  position: relative;
-  bottom: 15px;
+}
+
+/* Popular Tour Styles */
+
+.pp-tour {
+  max-width: 1170px;
+  margin: 50px auto;
+  display: flex;
+  gap: 60px;
+}
+
+.tour-content {
+  width: 48%;
+}
+
+.tour-title {
+  color: #131318;
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+
+.info {
+  color: rgba(19, 19, 24, 0.70);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+.tour-title, .info, .info li {
+  margin-bottom: 20px;
+}
+
+.info li {
+  padding-left: 20px;
+}
+
+.tour-img img {
+  width: 100%;
+}
+
+.btn-tour {
+  border-radius: 8px;
+  background: #FF5400;
+  width: 174px;
+  padding: 14px 30px;
+  color: #fff;
+  border: 0;
+  font-size: 20px;
+  font-weight: 800;
+
+}
+
+@media screen and (max-width:576px){
+  .banner {
+    padding: 10px;
+  }
+  
+  .banner-title {
+    font-size: 22px;
+    font-weight: 800;
+  }
+
+  .banner-info {
+    font-size: 14px;
+    line-height: 21px;
+  }
+
+  .search-form, .pp-tour {
+    flex-direction: column;
+    padding: 16px;
+  }
+
+  .tour-content {
+    width: 100%;
+    padding: 20px;
+  }
 }
